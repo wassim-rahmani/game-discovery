@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, HStack, List, ListItem, Text, Image } from "@chakra-ui/react";
 import React from "react";
 import useGenres, { Genre } from "../hooks/useGenres";
 import useData from "../hooks/useData";
@@ -12,11 +12,20 @@ function GenreList() {
     <Box>
       {error && <Text color="tomato">{error}</Text>}
 
-      <ul>
+      <List>
         {genres.map((genre) => (
-          <li>{genre.name}</li>
+          <ListItem key={genre.id} paddingY="5px">
+            <HStack>
+              <Image
+                boxSize="32px"
+                borderRadius={8}
+                src={genre.image_background}
+              ></Image>
+              <Text fontSize="large">{genre.name}</Text>
+            </HStack>
+          </ListItem>
         ))}
-      </ul>
+      </List>
     </Box>
   );
 }
