@@ -3,6 +3,7 @@ import useGames from "../hooks/useGames";
 import GameCard from "./GameCard";
 import GameCardSkeleton from "./GameCardSkeleton";
 import { useEffect } from "react";
+import GameCardContainer from "./GameCardContainer";
 
 function GamesGrid() {
   const { games, error, isLoading } = useGames();
@@ -22,11 +23,17 @@ function GamesGrid() {
         spacing={10}
       >
         {isLoading &&
-          skeletons.map((skeleton) => <GameCardSkeleton key={skeleton} />)}
+          skeletons.map((skeleton) => (
+            <GameCardContainer>
+              <GameCardSkeleton key={skeleton} />
+            </GameCardContainer>
+          ))}
 
         {games.map((game) => (
           <GridItem key={game.id}>
-            <GameCard game={game}></GameCard>
+            <GameCardContainer>
+              <GameCard game={game}></GameCard>
+            </GameCardContainer>
           </GridItem>
         ))}
       </SimpleGrid>

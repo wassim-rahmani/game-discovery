@@ -10,6 +10,7 @@ import {
 import { Game } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import CriticScoreBadge from "./CriticScoreBadge";
+import GameCardContainer from "./GameCardContainer";
 
 interface Props {
   game: Game;
@@ -17,7 +18,7 @@ interface Props {
 
 function GameCard({ game }: Props) {
   return (
-    <Card width="300px" height="400px" borderRadius={10} overflow="hidden">
+    <Card height="100%">
       <Image src={game.background_image}></Image>
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
