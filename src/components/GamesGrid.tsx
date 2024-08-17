@@ -6,13 +6,15 @@ import { useEffect } from "react";
 import GameCardContainer from "./GameCardContainer";
 import useData from "../hooks/useData";
 import { Genre } from "../hooks/useGenres";
+import { Platform } from "../hooks/usePlatforms";
 
 interface Props {
   selectedGenre: Genre | null;
+  selectedPlatform: Platform | null;
 }
 
-function GamesGrid({ selectedGenre }: Props) {
-  const { data, error, isLoading } = useGames(selectedGenre);
+function GamesGrid({ selectedGenre, selectedPlatform }: Props) {
+  const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform);
 
   const games = data;
 
