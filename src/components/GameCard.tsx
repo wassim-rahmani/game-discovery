@@ -19,7 +19,11 @@ interface Props {
 function GameCard({ game }: Props) {
   return (
     <Card height="100%">
-      <Image src={game.background_image}></Image>
+      <Image
+        minHeight="50%"
+        maxHeight="50%"
+        src={game.background_image}
+      ></Image>
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
         <HStack justify="space-between">

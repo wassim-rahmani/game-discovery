@@ -5,9 +5,14 @@ import GameCardSkeleton from "./GameCardSkeleton";
 import { useEffect } from "react";
 import GameCardContainer from "./GameCardContainer";
 import useData from "../hooks/useData";
+import { Genre } from "../hooks/useGenres";
 
-function GamesGrid() {
-  const { data, error, isLoading } = useGames();
+interface Props {
+  selectedGenre: Genre | null;
+}
+
+function GamesGrid({ selectedGenre }: Props) {
+  const { data, error, isLoading } = useGames(selectedGenre);
 
   const games = data;
 
