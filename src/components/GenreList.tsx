@@ -32,7 +32,9 @@ function GenreList({ handleSelectGenre, selectedGenre }: Props) {
 
   return (
     <Box>
-      <Heading mb="10px">Genres</Heading>
+      <Heading mb="10px" fontSize="2xl">
+        Genres
+      </Heading>
       <List>
         {genres.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">

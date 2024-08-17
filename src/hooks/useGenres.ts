@@ -3,7 +3,7 @@ import useData from "./useData";
 import genres from "../genres"
 
 export interface Genre{
-  id: string,
+  id: number,
   name: string,
   image_background: string;
   
