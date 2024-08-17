@@ -21,6 +21,7 @@ function GameCard({ game }: Props) {
   return (
     <Card height="100%">
       <Image
+        objectFit="cover"
         minHeight="50%"
         maxHeight="50%"
         src={game.background_image ? game.background_image : noImage}

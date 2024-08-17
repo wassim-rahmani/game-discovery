@@ -7,6 +7,7 @@ import {
   Image,
   Spinner,
   Button,
+  Heading,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import useGenres, { Genre } from "../hooks/useGenres";
@@ -31,6 +32,7 @@ function GenreList({ handleSelectGenre, selectedGenre }: Props) {
 
   return (
     <Box>
+      <Heading mb="10px">Genres</Heading>
       <List>
         {genres.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
@@ -39,8 +41,11 @@ function GenreList({ handleSelectGenre, selectedGenre }: Props) {
                 boxSize="32px"
                 borderRadius={8}
                 src={genre.image_background}
+                objectFit="cover"
               ></Image>
               <Button
+                whiteSpace="normal"
+                textAlign="left"
                 onClick={() => selectGenre(genre)}
                 fontSize="large"
                 variant="link"
