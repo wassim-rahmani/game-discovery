@@ -11,7 +11,7 @@ function ColorModeSwitch() {
         onChange={toggleColorMode}
         colorScheme="green"
       />
-      <Text>Dark mode</Text>
+      <Text whiteSpace="nowrap">Dark mode</Text>
     </HStack>
   );
 }
