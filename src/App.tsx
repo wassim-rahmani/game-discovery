@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show, Box, HStack, Text } from "@chakra-ui/react";
+import { Grid, GridItem, Show, HStack } from "@chakra-ui/react";
 import NavBar from "./components/navbar";
 import GamesGrid from "./components/GamesGrid";
 import GenreList from "./components/GenreList";
@@ -17,6 +17,8 @@ export interface GameQuery {
 }
 
 function App() {
+  document.title = "Game Discovery";
+
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   const handleSelectGenre = (genre: Genre) => {

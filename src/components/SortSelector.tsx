@@ -1,7 +1,5 @@
 import { Menu, MenuButton, Button, MenuList, MenuItem } from "@chakra-ui/react";
-import React from "react";
 import { BsChevronDown } from "react-icons/bs";
-import { GameQuery } from "../App";
 
 interface Props {
   onSelectSortOrder: (sortOrder: string) => void;

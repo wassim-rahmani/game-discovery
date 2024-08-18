@@ -1,16 +1,8 @@
-import {
-  Badge,
-  Card,
-  CardBody,
-  HStack,
-  Heading,
-  Image,
-  Text,
-} from "@chakra-ui/react";
+import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { Game } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
 import CriticScoreBadge from "./CriticScoreBadge";
-import GameCardContainer from "./GameCardContainer";
+
 import noImage from "../assets/no-image-placeholder-6f3882e0.webp";
 
 interface Props {

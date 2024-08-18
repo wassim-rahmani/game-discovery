@@ -3,15 +3,13 @@ import {
   HStack,
   List,
   ListItem,
-  Text,
   Image,
   Spinner,
   Button,
   Heading,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+
 import useGenres, { Genre } from "../hooks/useGenres";
-import useData from "../hooks/useData";
 
 interface Props {
   handleSelectGenre: (genre: Genre) => void;
