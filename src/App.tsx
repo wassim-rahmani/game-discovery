@@ -17,8 +17,6 @@ export interface GameQuery {
 }
 
 function App() {
-  document.title = "Game Discovery";
-
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
 
   const handleSelectGenre = (genre: Genre) => {
